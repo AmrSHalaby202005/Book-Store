@@ -11,8 +11,8 @@ const navLinks = [
   },
   {
     id: 3,
-    url: "/About-us",
-    text: "About us",
+    url: "/Aboutus",
+    text: "Aboutus",
   },
 ];
 

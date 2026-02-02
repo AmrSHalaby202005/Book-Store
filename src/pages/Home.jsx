@@ -12,7 +12,7 @@ import { IoSearchOutline } from "react-icons/io5";
 
 const Home = () => {
   return (
-    <div className="relateve w-full mb- bg-[#F5F5F5]">
+    <div className="relateve w-full bg-[#F5F5F5]">
       <div className="relative w-full h-screen">
         <img src="/Home.png" alt="" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-black/50"></div>

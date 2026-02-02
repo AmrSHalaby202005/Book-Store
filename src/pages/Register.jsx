@@ -1,7 +1,8 @@
-import { Field, Form, Formik } from "formik";
+import { ErrorMessage, Field, Form, Formik } from "formik";
 import { Link, useNavigate } from "react-router-dom";
 import Google from "../components/ui/Google";
 import Facebook from "../components/ui/Facebook";
+import * as Yup from "yup";
 import axios from "axios";
 
 const Register = () => {
@@ -24,6 +25,14 @@ const Register = () => {
     }
   };
 
+  const RegisterSchema = Yup.object({
+    first_name: Yup.string().required(),
+    last_name: Yup.string().required(),
+    email: Yup.string().email().required(),
+    password: Yup.string().required(),
+    password_confirmation: Yup.string().required(),
+  });
+
   return (
     <div className="bg-[#F5F5F5]">
       <div className="relative w-full mb-20 max-h-70 overflow-hidden">
@@ -41,6 +50,7 @@ const Register = () => {
           onSubmit={(values) => {
             handleRegister(values);
           }}
+          validationSchema={RegisterSchema}
         >
           <Form className="flex flex-col gap-3 mt-10 w-xl mb-96">
             <div className="flex gap-2">
@@ -54,6 +64,11 @@ const Register = () => {
                   type="text"
                   placeholder="John"
                 />
+                <ErrorMessage
+                  name="first_name"
+                  component="p"
+                  className="text-red-500"
+                />
               </div>
               <div className="last-Name flex flex-col gap-2 w-full">
                 <label className="font-medium" htmlFor="">
@@ -64,6 +79,11 @@ const Register = () => {
                   name="last_name"
                   type="text"
                   placeholder="Smith"
+                />
+                <ErrorMessage
+                  name="last_name"
+                  component="p"
+                  className="text-red-500"
                 />
               </div>
             </div>
@@ -76,6 +96,7 @@ const Register = () => {
               type="email"
               placeholder="example@gmail.com"
             />
+            <ErrorMessage name="email" component="p" className="text-red-500" />
             <label className="font-medium" htmlFor="password">
               Password
             </label>
@@ -85,6 +106,11 @@ const Register = () => {
               type="password"
               placeholder="Enter password"
             />
+            <ErrorMessage
+              name="password"
+              component="p"
+              className="text-red-500"
+            />
             <label className="font-medium" htmlFor="confirm-password">
               Confirm Password
             </label>
@@ -93,6 +119,11 @@ const Register = () => {
               name="password_confirmation"
               type="password"
               placeholder="Enter password"
+            />
+            <ErrorMessage
+              name="password_confirmation"
+              component="p"
+              className="text-red-500"
             />
             <div className="Agree flex items-center gap-2">
               <Field type="checkbox" name="remember" />

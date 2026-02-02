@@ -5,20 +5,37 @@ import Google from "../components/ui/Google";
 import Facebook from "../components/ui/Facebook";
 import * as Yup from "yup";
 import axios from "axios";
+import { useAuthStore } from "../store";
 
 const Login = () => {
   const navigate = useNavigate();
+
+  const login = useAuthStore((state) => state.login);
+
   async function handleLogin(values) {
-    console.log(values);
     try {
       const res = await axios.post(
         "https://bookstore.eraasoft.pro/api/login",
         values,
       );
+
+      console.log("Login response:", res.data);
+
+      const useAuthStore = res?.data?.data?.token;
+      const token = res?.data?.data?.token;
+
+      if (!useAuthStore) {
+        console.error("User data not found!");
+        return;
+      }
+
+      login(useAuthStore);
+
+      if (token) localStorage.setItem("token", token);
+
       navigate("/");
-      console.log(res);
     } catch (error) {
-      console.log(error.response.data);
+      console.error("Login failed:", error.response?.data || error.message);
     }
   }
 

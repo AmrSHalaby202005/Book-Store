@@ -31,50 +31,48 @@ const Aboutus = () => {
       </div>
       {/* ///////////////////////////////////////////////////////////////////////////////// */}
       {/* المهمات */}
-      <div className="pt-30 pb-20">
-        <h2 className="text-3xl font-semibold text-center pb-20">
-          Our Mission
-        </h2>
-        <div className="flex gap-10 justify-center items-center">
-          <div className="p-4 border border-black/30 rounded-2xl bg-white">
+      <div className="py-20">
+        <h2 className="text-center text-3xl font-bold">Our Mission</h2>
+        <div className="flex justify-center items-center gap-12 pt-10 px-30 w-full">
+          <div className="border border-black/20 p-8 rounded-2xl bg-white">
             <h2 className="text-xl font-semibold pb-4">Quality Selection</h2>
-            <p className="text-sm text-black/50 w-65 pb-4">
+            <p className="text-black/50 pb-4">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et
               ultricies est. Aliquam in justo varius, sagittis neque ut,
-              malesuada leo.Quality Selection Lorem ipsum dolor sit amet,
+              malesuada leo.Quality SelectionLorem ipsum dolor sit amet,
               consectetur adipiscing elit. Mauris et ultricies est. Aliquam in
               justo varius,
             </p>
-            <span className="text-[#D9176C]">View More</span>
+            <span className="text-sm text-pink-600">View More</span>
           </div>
-          <div className="p-4 border border-black/30 rounded-2xl bg-white">
+          <div className="border border-black/20 p-8 rounded-2xl bg-white">
             <h2 className="text-xl font-semibold pb-4">Exceptional Service</h2>
-            <p className="text-sm text-black/50 w-65 pb-4">
+            <p className="text-black/50 pb-4">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et
               ultricies est. Aliquam in justo varius, sagittis neque ut,
-              malesuada leo.Quality Selection Lorem ipsum dolor sit amet,
+              malesuada leo.Quality SelectionLorem ipsum dolor sit amet,
               consectetur adipiscing elit. Mauris et ultricies est. Aliquam in
               justo varius,
             </p>
-            <span className="text-[#D9176C]">View More</span>
+            <span className="text-sm text-pink-600">View More</span>
           </div>
-          <div className="p-4 border border-black/30 rounded-2xl bg-white">
+          <div className="border border-black/20 p-8 rounded-2xl bg-white">
             <h2 className="text-xl font-semibold pb-4">Set Up Stores</h2>
-            <p className="text-sm text-black/50 w-65 pb-4">
+            <p className="text-black/50 pb-4">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et
               ultricies est. Aliquam in justo varius, sagittis neque ut,
-              malesuada leo.Quality Selection Lorem ipsum dolor sit amet,
+              malesuada leo.Quality SelectionLorem ipsum dolor sit amet,
               consectetur adipiscing elit. Mauris et ultricies est. Aliquam in
               justo varius,
             </p>
-            <span className="text-[#D9176C]">Soon</span>
+            <span className="text-sm text-pink-600">Soon</span>
           </div>
         </div>
       </div>
       {/* ///////////////////////////////////////////////////////////////////////////////// */}
       {/* التواصل */}
-      <div className="py-20 bg-[#3B2F4A]/80 flex w-full items-center justify-center">
-        <div className="flex justify-between items-start gap-50 text-white pl-20">
+      <div className="py-20 bg-[#3B2F4A]/80 flex items-center justify-center">
+        <div className="flex gap-40 text-white pl-30">
           <div className="w-1/2">
             <h2 className="text-4xl font-bold mb-4">Have a Questions?</h2>
             <h3 className="text-4xl font-bold mb-6">Get in Touch</h3>
@@ -85,9 +83,6 @@ const Aboutus = () => {
             </p>
             <form className="space-y-4">
               <div className="flex gap-4">
-                <span className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400">
-                  <IoPerson />
-                </span>
                 <input
                   type="text"
                   placeholder="Name"
@@ -111,7 +106,7 @@ const Aboutus = () => {
               </div>
             </form>
           </div>
-          <div className="w-1/2 flex flex-col space-y-6 px-0">
+          <div className="w-1/2 flex flex-col space-y-6 pl-30">
             <div className="flex items-center gap-4">
               <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center">
                 <MdOutlinePhoneInTalk className="text-pink-600" size={20} />
