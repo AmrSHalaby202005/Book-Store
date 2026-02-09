@@ -11,7 +11,14 @@ import Books from "../pages/Books";
 import Profile from "../pages/Profile";
 import Productdetails from "../pages/Productdetails";
 import Customerreviews from "../pages/Customerreviews";
-import Recommendedbooks from "../pages/Recommendedbooks";
+import Recommended from "../pages/Recommended";
+import Mycart from "../pages/Mycart";
+import Wishlist from "../pages/Wishlist";
+import Checkout from "../pages/Checkout";
+import Historyall from "../pages/Historyall";
+import HistoryInprogress from "../pages/HistoryInprogress";
+import Historycompleted from "../pages/Historycompleted";
+import Canceled from "../pages/Canceled";
 
 const router = createBrowserRouter([
   {
@@ -63,8 +70,36 @@ const router = createBrowserRouter([
         element: <Customerreviews />,
       },
       {
-        path: "/Recommendedbooks",
-        element: <Recommendedbooks />,
+        path: "/Recommended",
+        element: <Recommended />,
+      },
+      {
+        path: "/Mycart",
+        element: <Mycart />,
+      },
+      {
+        path: "/Wishlist",
+        element: <Wishlist />,
+      },
+      {
+        path: "/Checkout",
+        element: <Checkout />,
+      },
+      {
+        path: "/Historyall",
+        element: <Historyall />,
+      },
+      {
+        path: "/HistoryInprogress",
+        element: <HistoryInprogress />,
+      },
+      {
+        path: "/Historycompleted",
+        element: <Historycompleted />,
+      },
+      {
+        path: "/Canceled",
+        element: <Canceled />,
       },
     ],
   },

@@ -2,10 +2,12 @@ import { Heart, Minus, Plus } from "lucide-react";
 import React from "react";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { BsShare } from "react-icons/bs";
-import { FaCheckCircle, FaFacebookF } from "react-icons/fa";
+import { FaCheckCircle, FaFacebookF, FaRegStar, FaStar } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { GrInstagram } from "react-icons/gr";
 import { ImWhatsapp } from "react-icons/im";
+import { IoIosArrowDropleft, IoIosArrowDropright } from "react-icons/io";
+import { LuShoppingCart } from "react-icons/lu";
 import { TbTruckDelivery } from "react-icons/tb";
 
 const product = {
@@ -29,84 +31,9 @@ const product = {
   ],
 };
 
-const reviews = [
-  {
-    id: 1,
-    name: "John Smith",
-    avatar: "/boy_6048329.png",
-    verified: true,
-    verified1: "Verified Purchase",
-    date: "28/07/2024",
-    title: "Excellent Book",
-    rating: 5,
-    comment:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et ultricies est. Aliquam in justo varius, sagittis neque ut.",
-  },
-  {
-    id: 2,
-    name: "John Smith",
-    avatar: "/boy_6048329.png",
-    verified: true,
-    verified1: "Verified Purchase",
-    date: "28/07/2024",
-    title: "Excellent Book",
-    rating: 5,
-    comment:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et ultricies est. Aliquam in justo varius, sagittis neque ut.",
-  },
-  {
-    id: 3,
-    name: "John Smith",
-    avatar: "/boy_6048329.png",
-    verified: true,
-    verified1: "Verified Purchase",
-    date: "28/07/2024",
-    title: "Excellent Book",
-    rating: 5,
-    comment:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et ultricies est. Aliquam in justo varius, sagittis neque ut.",
-  },
-  {
-    id: 4,
-    name: "John Smith",
-    avatar: "/boy_6048329.png",
-    verified: true,
-    verified1: "Verified Purchase",
-    date: "28/07/2024",
-    title: "Excellent Book",
-    rating: 5,
-    comment:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et ultricies est. Aliquam in justo varius, sagittis neque ut.",
-  },
-  {
-    id: 5,
-    name: "John Smith",
-    avatar: "/boy_6048329.png",
-    verified: true,
-    verified1: "Verified Purchase",
-    date: "28/07/2024",
-    title: "Excellent Book",
-    rating: 5,
-    comment:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et ultricies est. Aliquam in justo varius, sagittis neque ut.",
-  },
-  {
-    id: 6,
-    name: "John Smith",
-    avatar: "/boy_6048329.png",
-    verified: true,
-    verified1: "Verified Purchase",
-    date: "28/07/2024",
-    title: "Excellent Book",
-    rating: 5,
-    comment:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et ultricies est. Aliquam in justo varius, sagittis neque ut, ",
-  },
-];
-
-const Customerreviews = () => {
+const Recommended = () => {
   return (
-    <div className="bg-gray-100">
+    <div>
       <div className="relative w-full mb-20 max-h-30 overflow-hidden">
         <img className="w-full h-full object-cover" src="/Home.png" alt="" />
       </div>
@@ -236,59 +163,121 @@ const Customerreviews = () => {
             <button className="font-medium pb-3 text-gray-500">
               Product Details
             </button>
-            <button className="pb-3 border-b-3 border-pink-600 font-medium">
+            <button className="font-medium pb-3 text-gray-500">
               Customer Reviews
             </button>
-            <button className="font-medium pb-3 text-gray-500">
+            <button className="pb-3 border-b-3 border-pink-600 font-medium">
               Recommended For You
             </button>
           </div>
         </div>
-        <div className="flex flex-wrap gap-6 pb-30">
-          {reviews.map((review) => (
-            <div key={review.id} className="w-[49%]  bg-white p-6 shadow-sm">
-              {/* Header */}
-              <div className="flex items-center gap-4 mb-3">
-                <img
-                  src={review.avatar}
-                  alt={review.name}
-                  className="w-14 h-14 rounded-full object-cover"
-                />
 
-                <div>
-                  <h3 className="font-semibold text-gray-900">{review.name}</h3>
-                  <span className="font-medium text-green-600 text-sm">
-                    {review.verified1}
-                  </span>
-                </div>
-              </div>
+        <div className="relative flex justify-center items-center gap-8 pt-10 pb-30">
+          <button className="flex items-center justify-center text-black/30">
+            <IoIosArrowDropleft size={50} />
+          </button>
 
-              {/* Date */}
-              <p className="text-sm text-gray-400 mb-2">
-                Reviewed On {review.date}
-              </p>
-
-              {/* Title + Rating */}
-              <div className="flex items-center gap-2 mb-2">
-                <h4 className="font-semibold text-gray-900">{review.title}</h4>
-                <span className="font-semibold">5.0</span>
-
-                <div className="flex text-yellow-400 text-3xl">
-                  {Array.from({ length: review.rating }).map((i) => (
-                    <span key={i}>★</span>
-                  ))}
-                </div>
-              </div>
-
-              {/* Comment */}
-              <p className="text-gray-500 text-lg leading-relaxed">
-                {review.comment}
-              </p>
+          <div className="bg-[#3B2F4A] text-white rounded-xl p-5 flex gap-4 w-106">
+            <div className="w-40">
+              <img
+                src="/93e9747c9160601f7f3a7a57420103fe4025b18a.png"
+                alt=""
+                className="rounded-lg w-full h-full object-cover"
+              />
             </div>
-          ))}
+
+            <div className="flex flex-col justify-between flex-1">
+              <div>
+                <h3 className="font-semibold text-lg">Rich Dad And Poor Dad</h3>
+                <p className="text-sm text-gray-300 mb-2">
+                  Author: Robert T. Kiyosaki
+                </p>
+
+                <div className="flex items-center gap-1 text-yellow-400 text-sm">
+                  <FaStar />
+                  <FaStar />
+                  <FaStar />
+                  <FaStar />
+                  <FaRegStar />
+                  <span className="text-gray-300 ml-2">(180 Review)</span>
+                </div>
+                <p className="text-sm text-gray-400 pb-4">
+                  Rate: <span className="font-medium text-white">4.2</span>
+                </p>
+
+                <div className="flex items-center gap-3 mb-4">
+                  <span className="text-gray-400 text-sm">$45.00</span>
+                  <span className="text-xl font-simibold">$30.00</span>
+                </div>
+
+                <div className="h-2 bg-gray-600 rounded-full mb-1">
+                  <div className="h-full w-[70%] bg-orange-400 rounded-full"></div>
+                </div>
+                <span className="text-xs text-gray-400">4 books left</span>
+              </div>
+
+              <div className="flex justify-end mt-4">
+                <button className="bg-pink-600 p-3 rounded-lg">
+                  <LuShoppingCart size={22} />
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-[#3B2F4A] text-white rounded-xl p-5 flex gap-4 w-106">
+            <div className="w-40">
+              <img
+                src="/93e9747c9160601f7f3a7a57420103fe4025b18a.png"
+                alt=""
+                className="rounded-lg w-full h-full object-cover"
+              />
+            </div>
+
+            <div className="flex flex-col justify-between flex-1">
+              <div>
+                <h3 className="font-semibold text-lg">Rich Dad And Poor Dad</h3>
+                <p className="text-sm text-gray-300 mb-2">
+                  Author: Robert T. Kiyosaki
+                </p>
+
+                <div className="flex items-center gap-1 text-yellow-400 text-sm">
+                  <FaStar />
+                  <FaStar />
+                  <FaStar />
+                  <FaStar />
+                  <FaRegStar />
+                  <span className="text-gray-300 ml-2">(180 Review)</span>
+                </div>
+                <p className="text-sm text-gray-400 pb-4">
+                  Rate: <span className="font-medium text-white">4.2</span>
+                </p>
+
+                <div className="flex items-center gap-3 mb-4">
+                  <span className="text-gray-400 text-sm">$45.00</span>
+                  <span className="text-xl font-simibold">$30.00</span>
+                </div>
+
+                <div className="h-2 bg-gray-600 rounded-full mb-1">
+                  <div className="h-full w-[70%] bg-orange-400 rounded-full"></div>
+                </div>
+                <span className="text-xs text-gray-400">4 books left</span>
+              </div>
+
+              <div className="flex justify-end mt-4">
+                <button className="bg-pink-600 p-3 rounded-lg">
+                  <LuShoppingCart size={22} />
+                </button>
+              </div>
+            </div>
+          </div>
+
+          {/* Right Arrow */}
+          <button className="flex items-center justify-center text-black/30">
+            <IoIosArrowDropright size={50} />
+          </button>
         </div>
       </div>
     </div>
   );
 };
-export default Customerreviews;
+export default Recommended;
