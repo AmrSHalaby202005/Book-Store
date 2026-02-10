@@ -4,8 +4,6 @@ import { FaRegStar, FaStar } from "react-icons/fa";
 import { GiReturnArrow } from "react-icons/gi";
 import { LiaShippingFastSolid } from "react-icons/lia";
 import { RiCustomerService2Line, RiSecurePaymentLine } from "react-icons/ri";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
 import { IoIosArrowDropleft, IoIosArrowDropright } from "react-icons/io";
 import { LuShoppingCart } from "react-icons/lu";
 import { IoSearchOutline } from "react-icons/io5";
@@ -16,12 +14,15 @@ const Home = () => {
       <div className="relative w-full h-screen">
         <img src="/Home.png" alt="" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-black/50"></div>
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full flex justify-center px-4">
+        <div
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 
+                w-full hidden md:flex justify-center px-4"
+        >
           <div className="flex items-center bg-white rounded-full shadow-lg overflow-hidden w-full max-w-xl">
             <input
               type="text"
               placeholder="Search"
-              className="flex-1 px-6 py-3 outline-none text-gray-700"
+              className="flex-1   px-6 py-3 outline-none text-gray-700"
             />
 
             <button className="px-3 text-gray-400 hover:text-gray-600">
@@ -36,7 +37,10 @@ const Home = () => {
       </div>
       {/* /////////////////////////////////////////////////////////////////////////////////////// */}
       {/* الكروت */}
-      <div className="container  mx-auto flex justify-between items-center px-4 py-20 gap-15">
+      <div
+        className="container mx-auto grid gap-15 px-4 py-20
+                grid-cols-1 sm:grid-cols-2 lg:grid-cols-4"
+      >
         <div>
           <LiaShippingFastSolid className="text-3xl text-black/50 pb-2" />
           <h2 className="text-lg pb-2 font-bold">Fast & Reliable Shipping</h2>
@@ -101,7 +105,7 @@ const Home = () => {
       {/* المقترح لك */}
       <div className="container mx-auto py-30 px-10">
         <h2 className="text-2xl font-semibold pb-8">Recomended For You</h2>
-        <div className="flex gap-6">
+        <div className="flex flex-col md:flex-row gap-6">
           <div className="flex-1 bg-white shadow-lg p-6 flex gap-8">
             <div className="w-45">
               <img
@@ -219,7 +223,7 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="relative flex justify-center items-center gap-8 mx-auto">
+        <div className="relative flex justify-center items-center gap-8 mx-auto flex-col md:flex-row">
           <button className="flex items-center justify-center text-black/30">
             <IoIosArrowDropleft size={50} />
           </button>
